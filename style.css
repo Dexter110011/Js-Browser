@@ -1,0 +1,153 @@
+
+
+@font-face {
+	font-family: 'TTLakes-Medium';
+  src: local("TT Lakes"), url("TTLakes/TTLakes-Regular.woff") format(woff); 
+}
+body {
+  font-family: 'TTLakes-Medium';
+  min-width: 320px;
+  margin: 0;
+}
+
+.products-text {
+  color: rgba(126, 126, 130, 1);
+  padding-top: 15px;
+  padding-left: 20px;
+  border-top: 3px solid #D9FFF5;
+  margin-top:0;
+  font-weight: 300;
+}
+
+.button {
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.swiper {
+  padding: 20px;
+  background-color: #faf8f7;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+
+.swiper-slide {
+  width: 200px;
+  height: auto;
+  padding: 15px 15px 0 15px;
+  border: 1px solid #EAEAEA;
+  border-radius: 6px;
+  background-color: #FFFFFF;
+  padding-bottom: 10px;
+}
+
+.swiper-wrapper {
+  margin-bottom: 15px;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #B5B6BC;
+}
+
+.button-swiper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.button-swiper__logo-six {
+  width: 40px;  
+  height: 40px;
+  overflow: hidden;
+}
+
+.button-container {
+  background-color: #faf8f7;
+  box-shadow: 0 -5px 20px 0 #faf8f7;
+  position: relative;
+  z-index: 1;
+  padding: 10px 0 40px 10px;
+}
+
+.open-button {
+  
+  width: 150px;
+  display: flex;
+  gap: 15px;
+  display: none;
+  margin-left: 15px;
+}
+
+.button-swiper__arrow:hover {
+  opacity: 0.4;
+  transition: opacity 1s;
+  border-radius: 50%;
+}
+
+@media (min-width: 769px) {
+  .body {
+    min-width: 769px;
+  }
+
+  .swiper {
+    
+    background-color: #faf8f7;
+    mask-image: none;
+  }
+
+  .swiper-wrapper--layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    max-height: 500px;
+    transition: max-height 1s;
+    margin-bottom: 0;
+  }
+
+  .swiper-slide {
+    width: auto;
+  }
+
+  .swiper-pagination {
+    display: none;
+  }
+
+  .open-button {
+    display: flex;
+  }
+
+  .hidden {
+    max-height: 140px;
+    transition: max-height 1s;
+  }
+
+  .open-button__img {
+    transition: transform 1s;
+  }
+
+  .rotate {
+    transform: rotate(-180deg);
+  }
+}
+
+@media (min-width: 1120px) {
+  .body {
+    min-width: 1120px;
+  }
+
+  .swiper-wrapper--layout {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+}
